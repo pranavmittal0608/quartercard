@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twenty-Five</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="gate" id="gate">
+  <div class="gatebg"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="gatecard" id="gateCard">
+    <div class="gatesuits"><span>&#9824;</span><span class="r">&#9829;</span><span class="r">&#9830;</span><span>&#9827;</span></div>
+    <div class="eyebrow">Private room</div>
+    <h2>Twenty<em>&middot;</em>Five</h2>
+    <div class="gatetabs">
+      <button class="gtab sel" data-mode="in" type="button">Sign in</button>
+      <button class="gtab" data-mode="up" type="button">Create account</button>
+    </div>
+    <form id="gateForm" autocomplete="off">
+      <p class="gatep" id="gateP">Welcome back. Sign in to take your seat.</p>
+      <div class="field" id="fName" hidden>
+        <label for="gName">Display name</label>
+        <input class="inp" id="gName" type="text" autocomplete="off" maxlength="14" placeholder="What the table calls you">
+      </div>
+      <div class="field">
+        <label for="gEmail">Email</label>
+        <input class="inp" id="gEmail" type="email" autocomplete="username" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="gPass">Password</label>
+        <input class="inp" id="gPass" type="password" autocomplete="current-password" placeholder="At least 8 characters">
+      </div>
+      <div class="err" id="gErr"></div>
+      <button class="btn" id="gGo" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>
+<div id="app" hidden>
+  <header class="brand">
+    <div>
+      <h1>Twenty<em>·</em>Five</h1>
+      <div class="tag">Closest to 25 · one deck · call the bust</div>
+    </div>
+    <div class="brandtools">
+      <span class="walletChip" id="walletChip" hidden></span>
+      <button class="tbtn" id="rulesBtn">Rules</button>
+      <button class="tbtn" id="resetBtn" hidden>Leave table</button>
+      <button class="tbtn" id="signOutBtn" hidden>Sign out</button>
+    </div>
+  </header>
+
+  <section id="landing">
+    <div class="hero">
+      <div class="herofelt">
+        <div class="herocards" id="heroCards"></div>
+        <div class="herocount"><span id="heroTotal">—</span><em id="heroLabel">a hand worth 25</em></div>
+        <button class="replay" id="replayHero">Deal another 25</button>
+      </div>
+      <div class="herocopy">
+        <div class="eyebrow">2–4 players · one deck · one screen</div>
+        <h2>Get closest to <em>25</em>.<br>Catch someone who didn't.</h2>
+        <p>Every card is hidden. Every card you take costs chips and tells the table
+           something about you. The moment you take one, anyone can throw a chip and
+           accuse you of going over — and if they've read you right, they take your
+           whole stake off the table.</p>
+        <div class="actions">
+          <button class="btn" id="seatBtn">Take a seat</button>
+          <button class="btn ghost" id="readBtn">Read the rules</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="trainer">
+      <div class="eyebrow">Practice · low stakes table</div>
+      <h3>Would you <em>call</em>?</h3>
+      <p>Someone at the table has just taken a card. You see what everyone sees — the backs of
+         their cards and how they got there. Throw a chip if you think they are over 25. You are
+         scored in chips, not in guesses, because a call that loses at good odds is still a good call.</p>
+      <div class="tgrid">
+        <div class="tstage">
+          <div class="thand" id="tHand"></div>
+          <div class="trace" id="tTrace"></div>
+        </div>
+        <div class="tside">
+          <div id="tDecide">
+            <button class="btn" id="tCall">Call — they’re over</button>
+            <button class="btn ghost" id="tPass">Let it go</button>
+          </div>
+          <button class="btn" id="tNext" hidden>Deal another</button>
+          <div class="tresult">
+            <div class="tstamp" id="tStamp"></div>
+            <div class="tsub" id="tSub">Make the call.</div>
+          </div>
+        </div>
+      </div>
+      <div class="odds" id="tOdds"></div>
+      <div class="tally">
+        <div><b id="tNet">0</b><s>Net chips</s></div>
+        <div><b id="tSharp">—</b><s>Good decisions</s></div>
+        <div><b id="tHands">0</b><s>Hands</s></div>
+      </div>
+      <button class="peek" id="tBlind">Hide the odds and go on instinct</button>
+    </div>
+  </section>
+
+  <div id="tableview" hidden>
+  <div class="rail">
+    <div class="felt" id="felt">
+      <div class="arc"></div>
+      <div class="medallion">
+        <div class="shoe"><i></i><b id="deckCount">52</b></div>
+        <div class="potbox">
+          <div class="potlabel">Pot</div>
+          <div class="pot" id="pot">0</div>
+          <div class="roundtag" id="roundTag">—</div>
+        </div>
+      </div>
+      <div id="seats"></div>
+      <div class="flash" id="flash"></div>
+    </div>
+  </div>
+
+  <div class="minilog" id="miniLog" aria-live="polite"></div>
+  <div class="statusbar" id="status">Set up a game to begin.</div>
+  <div class="logwrap"><ul id="log"></ul></div>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"><div id="panelHost"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
