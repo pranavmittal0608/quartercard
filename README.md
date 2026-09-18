@@ -9,7 +9,13 @@ css/styles.css        all styling
 js/supabase-client.js accounts + wallet  <- the two lines you edit
 js/app.js             the game
 sql/schema.sql        run this once in Supabase
+docs/                 design context and history (not loaded by the game)
+legacy/               pre-split single-file version, reference only
 ```
+
+**New here?** Read `docs/PROJECT-CONTEXT.md` first — the rules, why each tuned
+number is what it is, and what is deliberately unfinished. `docs/DESIGN-HISTORY.md`
+covers how the design got here and which changes were tested and rejected.
 
 ## 1. Supabase
 
