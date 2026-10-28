@@ -129,7 +129,11 @@ posed explicitly: make calling on a player's second hit sit between −1 and 0
 expected value.
 
 Roughly four million simulated hands across eleven strategy archetypes
-established the bust rate at the moment each call window opens:
+established the bust rate at the moment each call window opens. (That original
+simulator was not kept. A reproducible re-implementation now lives in
+`simulation/` — see `simulation/README.md` — and its independent results agree:
+14 / 38 / 55 / 67% over 25 on cards one to four, stand on 23 still best, and
+the second-card call at −0.06 EV under penalty 7, inside the −1 to 0 band.)
 
 | Cards taken | Cards in hand | Actually over 25 | Frequency of that window |
 |---|---|---|---|
@@ -253,6 +257,7 @@ css/styles.css          all styling
 js/supabase-client.js   auth + wallet — the two lines you must edit
 js/app.js               the entire game: engine, bots, networking, UI
 sql/schema.sql          run once in Supabase
+simulation/             Monte Carlo simulator (Python), tests, results
 legacy/                 pre-split monolith, reference only
 docs/                   this folder
 ```
@@ -395,6 +400,13 @@ economy schema, and the buy-in/cash-out wiring into gameplay. Around 83 checks
 pass across five regression suites, covering chip conservation, the host/guest
 protocol including a specific test that no guest ever receives another player's
 cards, invite links, mobile layout on six phone sizes, and bot ordering.
+
+Also complete: a Python Monte Carlo simulator (`simulation/`) that plays the
+shipped rules — its engine cross-checked against `js/app.js` for every 2–6 card
+hand — measuring win rate and EV for eight strategies over 1,000,000+ hands and
+asserting chip conservation after every hand. The economy is documented in
+`docs/ECONOMY.md`, including the one place the build departs from the design:
+wallet play against bots currently pays winnings into the wallet.
 
 Not done, in the order it probably matters:
 

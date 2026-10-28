@@ -1,0 +1,340 @@
+{
+  "seed": "2026",
+  "workers": 2,
+  "python": "3.13.18",
+  "seconds": 34.68220543861389,
+  "total_hands": 3081209,
+  "stakes": {
+    "ante": 10,
+    "hit": 2,
+    "call": 5,
+    "pen": 7,
+    "bank": 200
+  },
+  "odds_player_table": {
+    "1": 0.18642514526381468,
+    "2": 0.37533838987391166,
+    "3": 0.5193381592554291,
+    "4": 0.618421052631579
+  },
+  "calibrated_bust_table": {
+    "1": 0.14137619844655103,
+    "2": 0.38465363193024926,
+    "3": 0.5550016479894528,
+    "4": 0.665080875356803
+  },
+  "calibration_hands": 201438,
+  "strategy_info": {
+    "Rock": {
+      "kind": "archetype",
+      "summary": "Stands on 19, never calls \u2014 plays not to lose"
+    },
+    "Silent Pro": {
+      "kind": "archetype",
+      "summary": "Stands on 23 (the measured optimum), never calls"
+    },
+    "Analyst": {
+      "kind": "archetype",
+      "summary": "Stands on 23, calls only when calling is +EV (calibrated odds)"
+    },
+    "Sheriff": {
+      "kind": "archetype",
+      "summary": "Stands on 22, calls every single card anyone takes"
+    },
+    "Maniac": {
+      "kind": "archetype",
+      "summary": "Pushes all the way to 25, calls anyone on their 2nd card or later"
+    },
+    "Guesser": {
+      "kind": "in-game bot",
+      "summary": "In-game Easy bot: random nerve 19-24 each hand, uncalibrated suspicion"
+    },
+    "Rule Player": {
+      "kind": "in-game bot",
+      "summary": "In-game Medium bot: stands on 21, calls from the 3rd card"
+    },
+    "Odds Player": {
+      "kind": "in-game bot",
+      "summary": "In-game Hard bot: stands on 22, calls when its static odds table says EV > 0"
+    }
+  },
+  "league": {
+    "Sheriff": {
+      "games": 1309,
+      "hands": 23119,
+      "ev_per_hand": -8.836671136294822,
+      "ev_ci95": 1.1563245158717457,
+      "win_rate": 0.05118411000763942,
+      "win_ci95": 0.011938363572019144,
+      "pot_win_rate": 0.055982092651066226,
+      "calls_per_hand": 0.9626281413555949,
+      "call_accuracy": 0.13448663221747922,
+      "call_net_per_hand": -7.747177646091959
+    },
+    "Guesser": {
+      "games": 1210,
+      "hands": 152342,
+      "ev_per_hand": -1.0533142534560398,
+      "ev_ci95": 0.13111199224844022,
+      "win_rate": 0.08099173553719008,
+      "win_ci95": 0.015372462679203934,
+      "pot_win_rate": 0.3007673524044585,
+      "calls_per_hand": 0.2555171915820982,
+      "call_accuracy": 0.3419565329085958,
+      "call_net_per_hand": -0.3546297147208255
+    },
+    "Rock": {
+      "games": 1270,
+      "hands": 105890,
+      "ev_per_hand": -2.0728019643025783,
+      "ev_ci95": 0.19076434418235913,
+      "win_rate": 0.029921259842519685,
+      "win_ci95": 0.009370173709277911,
+      "pot_win_rate": 0.22875310857178807,
+      "calls_per_hand": 0.0,
+      "call_accuracy": null,
+      "call_net_per_hand": 0.0
+    },
+    "Silent Pro": {
+      "games": 1257,
+      "hands": 521867,
+      "ev_per_hand": 0.3576658420632077,
+      "ev_ci95": 0.05518016389121985,
+      "win_rate": 0.43914081145584727,
+      "win_ci95": 0.02743577623966764,
+      "pot_win_rate": 0.40692456123878396,
+      "calls_per_hand": 0.0,
+      "call_accuracy": null,
+      "call_net_per_hand": 0.0
+    },
+    "Maniac": {
+      "games": 1241,
+      "hands": 101905,
+      "ev_per_hand": -2.092193709827781,
+      "ev_ci95": 0.20321100757227767,
+      "win_rate": 0.031426269137792104,
+      "win_ci95": 0.00970695321528448,
+      "pot_win_rate": 0.25191600019626087,
+      "calls_per_hand": 0.5228202737844071,
+      "call_accuracy": 0.36386500994782084,
+      "call_net_per_hand": -0.3688042784946764
+    },
+    "Rule Player": {
+      "games": 1216,
+      "hands": 360597,
+      "ev_per_hand": 0.0005019453850142958,
+      "ev_ci95": 0.06447770364150435,
+      "win_rate": 0.25,
+      "win_ci95": 0.02433828206107018,
+      "pot_win_rate": 0.38985487954697234,
+      "calls_per_hand": 0.1734651147957415,
+      "call_accuracy": 0.5167623219452926,
+      "call_net_per_hand": 0.7816121598349404
+    },
+    "Odds Player": {
+      "games": 1256,
+      "hands": 504530,
+      "ev_per_hand": 0.5991516857273106,
+      "ev_ci95": 0.0643304607937,
+      "win_rate": 0.5565286624203821,
+      "win_ci95": 0.027475006112452096,
+      "pot_win_rate": 0.4265483056838385,
+      "calls_per_hand": 0.15728301587616197,
+      "call_accuracy": 0.5427451672253446,
+      "call_net_per_hand": 0.8689612114244941
+    },
+    "Analyst": {
+      "games": 1241,
+      "hands": 497197,
+      "ev_per_hand": 0.6201324625852529,
+      "ev_ci95": 0.06420003729544445,
+      "win_rate": 0.5664786462530218,
+      "win_ci95": 0.0275719320455941,
+      "pot_win_rate": 0.424993848849987,
+      "calls_per_hand": 0.12738009280023813,
+      "call_accuracy": 0.5457028721203796,
+      "call_net_per_hand": 0.7210763540407524
+    }
+  },
+  "league_meta": {
+    "games": 2500,
+    "hands": 1043891,
+    "showdowns": 876461,
+    "dead": 167430,
+    "splits": 138969,
+    "mirror_splits": 61830,
+    "capped": 0,
+    "max_dead_streak": 34,
+    "max_pot": 748,
+    "win_n": [
+      0,
+      2005592,
+      1026515,
+      248137,
+      11317
+    ],
+    "win_bust": [
+      0,
+      284579,
+      395406,
+      137705,
+      7619
+    ],
+    "calls_by_k": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        34337,
+        4666,
+        -274428
+      ],
+      [
+        97839,
+        36575,
+        -38386
+      ],
+      [
+        186442,
+        103663,
+        1107949
+      ],
+      [
+        1079,
+        740,
+        12931
+      ]
+    ]
+  },
+  "call_ev": [
+    {
+      "card": 1,
+      "windows": 2005592,
+      "window_share": 0.6093133318811348,
+      "p_over_25": 0.141892767821172,
+      "ev_pen5": -6.168895268828356,
+      "ev_pen7": -7.885109733186011,
+      "ev_pen10": -10.459431429722496,
+      "calls_made": 34337,
+      "realised_ev_per_call": -7.992195008300085
+    },
+    {
+      "card": 2,
+      "windows": 1026515,
+      "window_share": 0.3118626694142992,
+      "p_over_25": 0.3851926177406078,
+      "ev_pen5": 1.170585914477626,
+      "ev_pen7": -0.059028850041158876,
+      "ev_pen10": -1.903450996819335,
+      "calls_made": 97839,
+      "realised_ev_per_call": -0.3923384335489938
+    },
+    {
+      "card": 3,
+      "windows": 248137,
+      "window_share": 0.07538581238506593,
+      "p_over_25": 0.5549555285991207,
+      "ev_pen5": 7.203621386572741,
+      "ev_pen7": 6.313532443770983,
+      "ev_pen10": 4.978399029568345,
+      "calls_made": 186442,
+      "realised_ev_per_call": 5.9425934070649316
+    },
+    {
+      "card": 4,
+      "windows": 11317,
+      "window_share": 0.003438186319500079,
+      "p_over_25": 0.673234956260493,
+      "ev_pen5": 12.21675355659627,
+      "ev_pen7": 11.563223469117256,
+      "ev_pen10": 10.582928337898736,
+      "calls_made": 1079,
+      "realised_ev_per_call": 11.984244670991659
+    }
+  ],
+  "threshold": [
+    {
+      "stand": 17,
+      "ev_per_hand": -3.1922152978449327,
+      "ev_ci95": 0.5452897084193562,
+      "win_rate": 0.016,
+      "win_ci95": 0.010998377189385716,
+      "hands": 28723,
+      "games": 500
+    },
+    {
+      "stand": 18,
+      "ev_per_hand": -2.3720355052350985,
+      "ev_ci95": 0.3231419299120183,
+      "win_rate": 0.03,
+      "win_ci95": 0.01495262920024435,
+      "hands": 36389,
+      "games": 500
+    },
+    {
+      "stand": 19,
+      "ev_per_hand": -1.139006987863185,
+      "ev_ci95": 0.27787729501046265,
+      "win_rate": 0.052,
+      "win_ci95": 0.019461526846576038,
+      "hands": 67975,
+      "games": 500
+    },
+    {
+      "stand": 20,
+      "ev_per_hand": -0.7003522467631379,
+      "ev_ci95": 0.14904433994116228,
+      "win_rate": 0.1,
+      "win_ci95": 0.02629615941539753,
+      "hands": 84032,
+      "games": 500
+    },
+    {
+      "stand": 21,
+      "ev_per_hand": 0.06392259668657604,
+      "ev_ci95": 0.08403294339921148,
+      "win_rate": 0.28,
+      "win_ci95": 0.03935648764816291,
+      "hands": 185005,
+      "games": 500
+    },
+    {
+      "stand": 22,
+      "ev_per_hand": 0.4379835802661545,
+      "ev_ci95": 0.09133508974391877,
+      "win_rate": 0.472,
+      "win_ci95": 0.043758157767438056,
+      "hands": 198907,
+      "games": 500
+    },
+    {
+      "stand": 23,
+      "ev_per_hand": 0.5260806109800472,
+      "ev_ci95": 0.09743933248225481,
+      "win_rate": 0.518,
+      "win_ci95": 0.04379852329930771,
+      "hands": 200072,
+      "games": 500
+    },
+    {
+      "stand": 24,
+      "ev_per_hand": -0.23893614875088262,
+      "ev_ci95": 0.08759687169159085,
+      "win_rate": 0.16,
+      "win_ci95": 0.0321344376020493,
+      "hands": 148705,
+      "games": 500
+    },
+    {
+      "stand": 25,
+      "ev_per_hand": -1.5775218230091876,
+      "ev_ci95": 0.20203885350579534,
+      "win_rate": 0.04,
+      "win_ci95": 0.017176579403362008,
+      "hands": 52353,
+      "games": 500
+    }
+  ]
+}

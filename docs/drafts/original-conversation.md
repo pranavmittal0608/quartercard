@@ -1235,7 +1235,7 @@ Download
 Sep 4
 You said: If you make a wrong call the hand should end immediately and new cards need to be dealt- readdjusts the stats and bots strategies accordingly.
 
-If you make a wrong call the hand should end immediately and new cards need to be dealt- readdjusts the stats and bots strategies accordingly. Change the name of the bots to more logical /self explanatory ones and add a difficulty rating next to it. If no one calls in a turn then display a message on the screen no one called. Display in a mini log of what just happened in the last 3 turns in the bottom left without revealing any crucial/sensitive info. Before showing the current landing page make it ask for a username and password and only if both correct let it continue- username: Pranav Mittal, password: Pranav112008. Before starting each game make it ask for a pin to start the actual game/ dealing of the first hand. The pin is 4049. Make the uni for the login cool.
+If you make a wrong call the hand should end immediately and new cards need to be dealt- readdjusts the stats and bots strategies accordingly. Change the name of the bots to more logical /self explanatory ones and add a difficulty rating next to it. If no one calls in a turn then display a message on the screen no one called. Display in a mini log of what just happened in the last 3 turns in the bottom left without revealing any crucial/sensitive info. Before showing the current landing page make it ask for a username and password and only if both correct let it continue- username: Pranav Mittal, password: [REDACTED]. Before starting each game make it ask for a pin to start the actual game/ dealing of the first hand. The pin is 4049. Make the uni for the login cool.
 
 Sep 4
 
